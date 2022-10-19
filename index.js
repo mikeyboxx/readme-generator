@@ -1,14 +1,20 @@
+// Import the promptInput method which allows us to pass a prompt message to display, and obtain user input from the CLI.
+const promptInput = require('./promptInput.js').promptInput;
+
 (async ()=>{
-    console.log(`Welcome to the Portfolio Generator!\n`);
-    console.log(`You will be prompted with a series of questions, \nfrom which a Portoflio HTML page will be generated.\n\n`);
+    console.log('\nWelcome to the README Generator!\n');
+    console.log('This tool will allow you to generate a high-quality, professional README.md file,');
+    console.log('based on your input from the command line, so that you can devote more time to working on your project.\n\n');
 
-    const userObj = {
-        name: await promptInput('What is your name?'),
-        location: await promptInput('Where do you live?'),
-        linkedInUrl: await promptInput('What is your LinkedIn Url?'),
-        gitHubUrl: await promptInput('What is your GitHub Url?'),
-        bio: await promptInput('Tell me a little about yourself (bio):'),
+    const inputObj = {
+        title: await promptInput('Title of your project:\n'),
+        description: await promptInput('Description:\n'),
+        installation: await promptInput('Installation instructions:\n'),
+        usage: await promptInput('Usage information:\n'),
+        contribution: await promptInput('Contribution guidelines:\n'),
+        tests: await promptInput('Test Instructions:\n'),
     }
+    console.log(inputObj);
 
-    fs.writeFile('index.html',buildHtmlStr(userObj),err => err ? console.log(err.message) : console.log(userObj));
+    // fs.writeFile('index.html',buildHtmlStr(userObj),err => err ? console.log(err.message) : console.log(userObj));
 })(); 
