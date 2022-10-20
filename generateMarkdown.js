@@ -1,8 +1,8 @@
-const licenses = require('./licenses.js');         // array of README License badges
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Render different sections of the README file
+const licenses = require('./licenses.js');   // array of README License badges
 
 const renderTitle = data => 
-    `${licenses[data.licenseIdx].badge}\n\n` +
+    `${licenses[data.licenseIdx].badge}\n\n` +    // license badge
     `# ${data.title}\n\n`;
 
 const renderDescription = data => 
@@ -35,15 +35,15 @@ const renderTests = data =>
 
 const renderLicense = data => 
     `## License\n\n` + 
-    `${licenses[data.licenseIdx].badge}\n` + 
-    `${licenses[data.licenseIdx].short}\n\n---\n\n`;
+    `${licenses[data.licenseIdx].badge}\n` +    // license badge
+    `${licenses[data.licenseIdx].short}\n\n---\n\n`;  // license description
 
 const renderQuestions = data => 
     `## Questions\n\n` +
     `[Github Profile](https://www.github.com/${data.githubUserName})\n\n` + 
     `For any additional questions, you can contact me at ${data.email}\n\n---\n\n`;
 
-
+// return a string of generated README markdown
 const generateMarkdown = data => 
     renderTitle(data) +
     renderDescription(data) +

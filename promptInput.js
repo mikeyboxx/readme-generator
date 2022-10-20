@@ -1,7 +1,6 @@
 const inquirer = require('inquirer'); // import the inquirer.js library
-
 // Prompt user for input text and validate input. 
-// If input is empty, then prompt again until user enters an non empty value. 
+// If input is empty and it's required, then prompt again until user enters an non empty value. 
 // Otherwise return input value.
 
 // accepts the prompt text to display on the command line, and a flag to make input required 
@@ -15,4 +14,4 @@ inquirer.prompt([{
 .then(answer => answer.val); // returns the user input
 
 
-module.exports = promptInput;
+module.exports = promptInput;  // export the function

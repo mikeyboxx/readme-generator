@@ -5,10 +5,10 @@ const promptList = (message, choices) =>
     inquirer.prompt([{
         name: "val",
         type: "list",
-        message: message,
-        choices: choices,
+        message: message,  
+        choices: choices,  
         pageSize: 100,
     }])
     .then(answer => answer.val); // index of the License in the licenses array
 
-module.exports = promptList;
+module.exports = promptList; // export the function
