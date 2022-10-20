@@ -11,6 +11,4 @@ const promptList = (message, choices) =>
     }])
     .then(answer => answer.val); // index of the License in the licenses array
 
-module.exports ={
-    promptList   
-}
+module.exports = promptList;

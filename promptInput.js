@@ -15,6 +15,4 @@ inquirer.prompt([{
 .then(answer => answer.val); // returns the user input
 
 
-module.exports ={
-    promptInput
-}
+module.exports = promptInput;

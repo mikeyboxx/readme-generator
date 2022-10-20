@@ -91,6 +91,4 @@ const licenses = [
 for(let i=0; i<licenses.length; i++)
     licenses[i].value = i;
 
-module.exports = {
-    licenses
-}
+module.exports = licenses;
