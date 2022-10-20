@@ -4,8 +4,8 @@ const inquirer = require('inquirer'); // import the inquirer.js library
 // If input is empty, then prompt again until user enters an non empty value. 
 // Otherwise return input value.
 
-// accepts the prompt text to display on the command line, and a flag to make input required (default)
-const promptInput = (message, required = true) =>
+// accepts the prompt text to display on the command line, and a flag to make input required 
+const promptInput = (message, required = false) =>
     inquirer.prompt([{
         name: "val",
         type: "input",
@@ -14,7 +14,7 @@ const promptInput = (message, required = true) =>
     }])
     .then(answer => answer.val); // returns the user input
 
-const promptList = (message, choices, required = true) =>
+const promptList = (message, choices) =>
     inquirer.prompt([{
         name: "val",
         type: "list",
@@ -22,7 +22,6 @@ const promptList = (message, choices, required = true) =>
         choices: choices,
         default: 0,
         pageSize: 100,
-        validate: input => console.log(input)
         // validate: input => (input.length > 0 || !required) ||  'This field is required. Please try again...' 
     }])
     .then(answer => answer.val); // returns the user input

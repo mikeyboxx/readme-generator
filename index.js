@@ -8,19 +8,15 @@ const licenses = require('./licenses.js').licenses;         // array of README L
     console.log('This tool will allow you to generate a high-quality, professional README.md file,');
     console.log('based on your input from the command line, so that you can devote more time to working on your project.\n\n');
 
-   
-
-    
-
 
     const inputObj = {
-        title: await promptInput('Title of your project:\n'),
-        description: await promptInput('Description:\n',false),
-        installation: await promptInput('Installation instructions:\n',false),
+        title: await promptInput('Title of your project:\n', true),
+        description: await promptInput('Description:\n'),
+        installation: await promptInput('Installation instructions:\n'),
         usage: await promptInput('Usage information:\n',false),
-        contribution: await promptInput('Contribution guidelines:\n',false),
-        tests: await promptInput('Test Instructions:\n',false),
-        license: await promptList('Pick a License:\n',licenses),
+        contribution: await promptInput('Contribution guidelines:\n'),
+        tests: await promptInput('Test Instructions:\n'),
+        licenseIdx: await promptList('Pick a License:\n',licenses),
     }
     console.log(inputObj);
 
