@@ -1,7 +1,7 @@
 // Import the promptInput method which allows us to pass a prompt message to display, and obtain user input from the CLI.
 const promptInput = require('./promptInput.js').promptInput;  // method to get user text input 
 const promptList = require('./promptInput.js').promptList;    // method to get user input from a list of options 
-const licenses = require('./licenses.js').promptList;         // array of README License badges
+const licenses = require('./licenses.js').licenses;         // array of README License badges
 
 (async ()=>{
     console.log('\nWelcome to the README Generator!\n');

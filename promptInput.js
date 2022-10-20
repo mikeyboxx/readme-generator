@@ -20,6 +20,8 @@ const promptList = (message, choices, required = true) =>
         type: "list",
         message: message,
         choices: choices,
+        default: 0,
+        pageSize: 100,
         validate: input => console.log(input)
         // validate: input => (input.length > 0 || !required) ||  'This field is required. Please try again...' 
     }])
