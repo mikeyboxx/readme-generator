@@ -6,8 +6,8 @@ const renderTitle = data =>
     `# ${data.title}\n\n`;
 
 const renderDescription = data => 
-    `## Description\n` + 
-    `${data.description}\n---\n\n`;
+    `## Description\n\n` + 
+    `${data.description}\n\n---\n\n`;
     
 const renderTableOfContents = () => 
     `## Table Of Contents\n` + 
@@ -15,33 +15,33 @@ const renderTableOfContents = () =>
     `- [Usage](#usage)\n` + 
     `- [Contributing](#contributing)\n` + 
     `- [License](#license)\n` + 
-    `- [Questions](#questions)\n---\n\n`;
+    `- [Questions](#questions)\n\n---\n\n`;
 
 const renderInstallation = data => 
-    `## Installation\n` + 
-    `${data.installation}\n---\n\n`;
+    `## Installation\n\n` + 
+    `${data.installation}\n\n---\n\n`;
 
 const renderUsage = data => 
-    `## Usage\n` + 
-    `${data.usage}\n---\n\n`;
+    `## Usage\n\n` + 
+    `${data.usage}\n\n---\n\n`;
 
 const renderContributing = data => 
-    `## Contributing\n` + 
-    `${data.contributing}\n---\n\n`;
+    `## Contributing\n\n` + 
+    `${data.contributing}\n\n---\n\n`;
 
 const renderTests = data => 
-    `## Tests\n` + 
-    `${data.tests}\n---\n\n`;
+    `## Tests\n\n` + 
+    `${data.tests}\n\n---\n\n`;
 
 const renderLicense = data => 
-    `## License\n` + 
-    `${licenses[data.licenseIdx].badge}\n\n` + 
+    `## License\n\n` + 
+    `${licenses[data.licenseIdx].badge}\n` + 
     `${licenses[data.licenseIdx].short}\n\n---\n\n`;
 
 const renderQuestions = data => 
-    `## Questions\n` +
+    `## Questions\n\n` +
     `[Github Profile](https://www.github.com/${data.githubUserName})\n\n` + 
-    `For any additional questions, you can contact me at ${data.email}\n\n---`;
+    `For any additional questions, you can contact me at ${data.email}\n\n---\n\n`;
 
 
 const generateMarkdown = data => 
